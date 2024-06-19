@@ -26,6 +26,7 @@ const { title } = Astro.props;
 	:root {
 		--darkGray: #252422;
 		--pink: #F9CDCD;
+		--bgWhite: #ECECEC;
 		--white: #fff;
 		--black: #000;
 	}
@@ -37,7 +38,7 @@ const { title } = Astro.props;
 	html {
 		box-sizing: border-box;
 		font-family: system-ui, sans-serif;
-		background: #ECECEC;
+		background: var(--bgWhite);
 	}
 
 	body, p{
