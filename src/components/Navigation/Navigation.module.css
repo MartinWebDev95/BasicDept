@@ -31,7 +31,7 @@
   padding-top: 6rem;
 }
 
-.navigation div {
+.navigation .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,7 +101,11 @@
   border: none;
 }
 
-@media (min-width: 1000px) {
+.horizontal_menu_btn {
+  display: none;
+}
+
+@media (min-width: 1200px) {
   .navigation {
     width: 100%;
     position: static;
@@ -124,7 +128,7 @@
     padding-top: 0rem;
   }
 
-  .navigation div {
+  .navigation .footer {
     display: none;
   }
     
@@ -141,4 +145,25 @@
   .list_item a:hover::after {
     width: 100%;
   }	
+
+  .horizontal_menu_btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+
+  .horizontal_menu_btn:hover {
+    gap: .5rem;
+  }
+  
+  .horizontal_menu_btn span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--white);
+  }
 }
