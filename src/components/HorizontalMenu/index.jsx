@@ -1,4 +1,5 @@
 import getDataHorizontalMenu from '../../utils/getDataHorizontalMenu'
+import CustomCursor from '../CustomCursor'
 import styles from './HorizontalMenu.module.css'
 
 const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
@@ -43,6 +44,8 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
             </li>
           ))}
         </ol>
+        
+        <CustomCursor />
       </div>
 
       <div className={styles.footer} aria-hidden={isHorizontalMenuHidden}>

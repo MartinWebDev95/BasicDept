@@ -1,0 +1,50 @@
+.cursor{
+  width: 110px;
+  height: 110px;
+  background-color: var(--pink);
+  color: var(--darkGray);
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  z-index: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: none;
+  transition: all .1s ease-in-out;
+}
+
+.cursor[aria-pressed=true]{
+  width: 70px;
+  height: 70px;
+  color: var(--pink);
+}
+
+.cursor[aria-pressed=true]::before{
+  display: block;
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 20px;
+  z-index: 20;
+  width: 0; 
+  height: 0; 
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent; 
+  border-right: 15px solid var(--pink); 
+}
+
+.cursor[aria-pressed=true]::after{
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: -30px;
+  top: 20px;
+  z-index: 20;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent; 
+  border-left: 15px solid var(--pink); 
+}
