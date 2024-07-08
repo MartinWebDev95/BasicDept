@@ -135,6 +135,7 @@
     height: 100%;
     transform-origin: right;
     position: relative;
+    user-select: none;
   }
 
   .carousel[aria-hidden=false] {
@@ -159,9 +160,6 @@
     counter-reset: list-counter;
     margin: 0;
     position: relative;
-  }
-
-  .carousel .carousel_list:hover {
     cursor: none;
   }
 
@@ -203,6 +201,7 @@
     width: 100%;
     display: block;
     transform: translateY(-70px) scale(1.1);
+    pointer-events: none;
     transition: all .3s ease-in-out;
   }
   

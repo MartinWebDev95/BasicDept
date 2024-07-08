@@ -11,8 +11,8 @@
   z-index: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  cursor: none;
-  transition: all .1s ease-in-out;
+  transition: all .1s linear;
+  pointer-events: none;
 }
 
 .cursor[aria-pressed=true]{

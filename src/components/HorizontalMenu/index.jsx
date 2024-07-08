@@ -1,8 +1,19 @@
+import useMoveCursor from '../../hooks/useMoveCursor'
 import getDataHorizontalMenu from '../../utils/getDataHorizontalMenu'
 import CustomCursor from '../CustomCursor'
 import styles from './HorizontalMenu.module.css'
 
 const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
+
+  const { 
+    cursorRef,
+    isPressed, 
+    handleMouseEnter, 
+    handleMouseMove, 
+    handleMouseLeave,
+    handleMouseDown,
+    handleMouseUp, 
+  } = useMoveCursor();
 
   return (
     <div className={styles.horizontal_menu} aria-hidden={isHorizontalMenuHidden}>
@@ -25,7 +36,15 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
         </button>
       </div>
 
-      <div className={styles.carousel} aria-hidden={isHorizontalMenuHidden}>
+      <div 
+        className={styles.carousel} 
+        aria-hidden={isHorizontalMenuHidden}
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+      >
         <ol className={styles.carousel_list}>
           {getDataHorizontalMenu.map((item) => (
             <li key={item.id} className={styles.carousel_item}>
@@ -45,7 +64,7 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
           ))}
         </ol>
         
-        <CustomCursor />
+        <CustomCursor cursorRef={cursorRef} isPressed={isPressed}/>
       </div>
 
       <div className={styles.footer} aria-hidden={isHorizontalMenuHidden}>
