@@ -1,0 +1,138 @@
+<div class="carousel">
+  <ul class="list">
+    <li class="list_item">
+      <a href="#">
+        <div>
+          <img src="/assets/patagonia.webp" alt="Patagonia">
+        </div>
+
+        <div class="item_info">
+          <h1>Patagonia</h1>
+
+          <p>An ecommerce experience driven by patagonia's brand mission</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href="#">
+        <div>
+          <img src="/assets/wilson.webp" alt="Wilson">
+        </div>
+
+        <div class="item_info">
+          <h1>Wilson</h1>
+
+          <p>A century-old sports brand finding its place in culture</p>
+        </div>
+      </a>
+    </li>
+
+    <li class="list_item">
+      <a href="#">
+        <div>
+          <video src="/assets/google_store.mp4" autoplay loop></video>
+        </div>
+      
+        <div class="item_info">
+          <h1>Google Store</h1>
+
+          <p>An ecommerce experience helping google bring its hardware to people across the globe</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  .carousel {
+    margin-top: 6rem;
+  }
+  
+  .carousel .list {
+    display: flex;
+    align-items: start;
+    gap: 1.5rem;
+    padding-inline: 1rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  
+  .list .list_item {
+    min-width: 90%;
+    height: auto;
+  }
+  
+  .list .list_item a {
+    width: 100%;
+    display: block;
+  }
+  
+  .list .list_item a:hover .item_info h1 {
+    text-decoration: underline;
+    text-decoration-thickness: .1rem;
+  }
+  
+  .list .list_item a:hover > div img, 
+  .list .list_item a:hover > div video {
+    transform: scale(1);
+  }
+  
+  .list .list_item a > div {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .list_item a > div img, 
+  .list_item a > div video {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+  }
+
+  .list_item a .item_info {
+    color: var(--darkGray);
+    text-transform: uppercase;
+  }
+
+  a .item_info h1 {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    font-size: clamp(1.1em, 2vw, 1.5em);
+  }
+
+  a .item_info p {
+    width: 22ch;
+    font-size: clamp(.8em, 2vw, .9em);
+    line-height: 1.1em;
+  }
+
+  @media (min-width: 580px) and (max-width: 720px) {
+    .list .list_item {
+      min-width: 70%;
+    }
+  }
+
+  @media (min-width: 720px) and (max-width: 900px) {
+    .list .list_item {
+      min-width: 50%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .carousel .list {
+      padding-inline: 4rem;
+      scroll-snap-type: none;
+      overflow-x: hidden;
+    }
+
+    .list .list_item {
+      min-width: 0%;
+      width: 100%;
+    }
+  }
+</style>
