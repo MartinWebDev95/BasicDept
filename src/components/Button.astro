@@ -1,0 +1,62 @@
+---
+  const { theme } = Astro.props;
+---
+<a href="#" class={`btn_base ${theme === 'light' ? 'btn_light' : 'btn_dark'}`}>
+  <slot />
+</a>
+
+<style>
+  .btn_base {
+    width: fit-content;
+    border-radius: 50px;
+    padding-inline: 2rem;
+    padding-block: .5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn_base.btn_light {
+    border: 1px solid var(--darkGray);
+    color: var(--darkGray);
+  }
+
+  .btn_base.btn_dark {
+    border: 1px solid var(--pink);
+    color: var(--pink);
+  }
+
+  .btn_base:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+  }
+
+  .btn_base.btn_light:after {
+    background-color: var(--darkGray);
+  }
+
+  .btn_base.btn_dark:after {
+    background-color: var(--pink);
+  }
+
+  .btn_base.btn_light:hover::after, .btn_base.btn_dark:hover::after {
+    height: 100%;
+  }
+
+  .btn_base.btn_light:hover {
+    color: var(--bgWhite);
+  }
+
+  .btn_base.btn_dark:hover {
+    color: var(--darkGray);
+  }
+</style>
