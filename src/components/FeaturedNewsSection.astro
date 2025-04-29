@@ -1,0 +1,198 @@
+---
+import Button from "./Button.astro";
+import ArrowRight from "./ArrowRight.astro"
+import getDataFeaturedNews from '../utils/getDataFeaturedNews'
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section_header">
+      <h2>Featured <br/> News</h2>
+
+      <Button theme="light" >View All</Button>
+    </div>
+
+    <ul class="news_list">
+      {getDataFeaturedNews.map((news) => (
+        <li class="news_item">
+          <a href="#" class="news_link">
+            <div class="news_image_container">
+              <img src={news.image} alt={news.title} class="news_image" />
+            </div>
+
+            <div class="news_content">
+              <div>
+                <h3>{news.title}</h3>
+                <p><span>Press </span>{news.press}</p>
+              </div>
+
+              <div class="news_arrow">
+                <figure>
+                  <ArrowRight />
+                </figure>
+              </div>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding-bottom: 4rem;
+  }
+
+  .section .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .section .container .section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section_header h2 {
+    text-transform: uppercase;
+    color: var(--darkGray);
+    font-size: 2.5em;
+  }
+
+  .news_list .news_item {
+    border-top: 1px solid var(--darkGray);
+  }
+  
+  .news_item .news_link {
+    margin-top: 1rem;
+    color: var(--darkGray);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .news_link .news_image_container {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .news_link .news_image_container .news_image {
+    transform: scale(1.1);
+    width: 100%;
+    transition: all .3s ease-in-out;
+  }
+  
+  .news_link h3 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .news_link h3 {
+    font-weight: 500;
+    font-size: clamp(1.1em, 4vw, 2.5em);
+    line-height: 1.1em;
+    padding-bottom: 2rem;
+  }
+
+  .news_link p {
+    font-size: clamp(0.7em, 2vw, 0.9em);
+    font-weight: 500;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+
+  .news_link p span {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .news_link .news_content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .news_link .news_content > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+  }
+
+  .news_link .news_content .news_arrow {
+    overflow: hidden;
+    place-self: flex-end;
+  }
+
+  .news_content .news_arrow figure {
+    margin: 0;
+  }
+
+  .news_item .news_link:hover .news_image_container .news_image {
+    transform: scale(1);
+  }
+
+  .news_item .news_link:hover .news_content h3 {
+    text-decoration: underline;
+    text-decoration-thickness: .2rem;
+  }
+
+  @keyframes arrow {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    50.1% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: none;
+    }
+  }
+
+  .news_item .news_link:hover .news_arrow figure {
+    animation: arrow 0.5s linear forwards;
+  }
+
+  @media (min-width: 720px) {
+    .news_list .news_item {
+      padding-bottom: 6rem;
+    }
+
+    .news_item .news_link {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .news_link .news_image_container {
+      width: 35%;
+    }
+
+    .news_link h3, .news_link p {
+      padding-bottom: 0;
+    }
+
+    .news_link h3 {
+      max-width: 25ch;
+    }
+
+    .news_link .news_content {
+      gap: 2rem;
+    }
+
+    .news_link .news_content .news_arrow {
+      place-self: flex-start;
+    }
+
+    .news_content .news_arrow figure {
+      margin: 0;
+    }
+  }
+</style>
