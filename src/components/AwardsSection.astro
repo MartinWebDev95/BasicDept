@@ -38,17 +38,15 @@
   .section {
     width: 90%;
     margin: 0 auto;
-    height: 90vh;
     border-bottom: 1px solid var(--darkGray);
-    display: grid;
-    place-content: center;
   }
 
   .section .awards_list {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     gap: 4rem;
+    padding-block: 6rem;
   }
 
   .awards_list .award_item{
@@ -86,5 +84,17 @@
 
   .award_item a span {
     text-align: center;
+    font-size: clamp(.9em, 2vw, 1.1em);
+  }
+
+  @media (min-width: 768px) {
+    .section{
+      height: 90vh;
+      display: grid;
+      place-content: center;
+    }
+    .section .awards_list {
+      flex-direction: row;
+    }
   }
 </style>
