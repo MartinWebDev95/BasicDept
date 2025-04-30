@@ -1,0 +1,257 @@
+---
+import ArrowRight from "./ArrowRight.astro";
+import LogoFooter from "./LogoFooter.astro";
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer_grid">
+      <div class="grid_image">
+        <figure>
+          <LogoFooter />
+        </figure>
+      </div>
+
+      <div class="grid_text">
+        <p>
+          We collaborate with ambitious brands and people. Let's build. 
+          <a href="#">biz@basicagency.com</a>
+        </p>
+      </div>
+
+      <div class="grid_form">
+        <form action="" class="form">
+          <div>
+            <label for="email">
+              Stay in the know  
+            </label>
+  
+            <div class="input_container">
+              <input type="email" name="email" id="email" placeholder="Email Address" required>
+              <ArrowRight type="form" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="grid_list">
+        <ul class="list">
+          <li class="list_item">
+            <span>Social</span>
+
+            <ul class="sublist">
+              <li class="sublist_item">Instagram</li>
+              <li class="sublist_item">Twitter</li>
+              <li class="sublist_item">LinkedIn</li>
+              <li class="sublist_item">Facebook</li>
+            </ul>
+          </li>
+          <li class="list_item">
+            <span>Initiatives</span>
+
+            <ul class="sublist">
+              <li class="sublist_item">Applied</li>
+              <li class="sublist_item">Brandbeats</li>
+              <li class="sublist_item">Moves</li>
+              <li class="sublist_item">B&copy;/Good</li>
+            </ul>
+          </li>
+          <li class="list_item">
+            <span>Offices</span>
+
+            <ul class="sublist">
+              <li class="sublist_item">San Diego-CA</li>
+              <li class="sublist_item">New York-NY</li>
+              <li class="sublist_item">Bay Area-CA</li>
+              <li class="sublist_item">St.Louis-MO</li>
+              <li class="sublist_item">Amsterdam-NL</li>
+              <li class="sublist_item">London-EN</li>
+              <li class="sublist_item">Berlin-GE</li>
+              <li class="sublist_item">Argentina-AR</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer_copyright">
+    <div class="container">
+      <p>Basic/Dept&copy;, Inc 10-25&copy;</p>
+      <p>Easy to understand, impossible to ignore.™</p>
+      <p>Terms, Privacy Policy</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--darkGray);
+  }
+
+  .footer .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 3rem;
+    color: var(--white);
+    width: 100%;
+  }
+
+  .footer_grid .grid_image figure {
+    margin: 0;
+  }
+
+  .footer_grid .grid_text p {
+    font-size: clamp(1em, 3vw, 2em);
+    line-height: 1.1em;
+  }
+
+  .grid_text a {
+    text-decoration: underline;
+    color: var(--white);
+  }
+
+  .footer_grid .grid_list .list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .list .list_item span {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    font-size: clamp(.9em, 3vw, 1.1em);
+  }
+
+  .list .list_item span::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--white);
+  }
+
+  .list_item .sublist .sublist_item {
+    font-size: clamp(.8em, 3vw, 1em);
+  }
+
+  .grid_form .form div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-transform: uppercase;
+  }
+
+  .form div label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: clamp(0.9em, 3vw, 1.1em);
+  }
+
+  .form div label::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--white);
+  }
+
+  .form .input_container{
+    position: relative;
+  }
+
+  .form .input_container input {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    padding: 0.5rem 0 1rem 0;
+    font-size: clamp(0.9em, 3vw, 1.1em);
+  }
+
+  .form .input_container input::placeholder {
+    color: var(--white);
+  }
+
+  .footer_copyright {
+    background-color: var(--bgCopyright);
+    padding-block: 1.5rem;
+  }
+
+  .footer_copyright p {
+    color: var(--gray);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.7rem;
+    margin-bottom: .5rem;
+  }
+
+  .footer_copyright p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 900px) {
+    .footer_grid {
+      display: grid;
+      grid-template-areas: "logo text"
+                           "form list";
+      grid-template-columns: 1fr 1fr;
+      padding-block: 6rem;
+      gap: 6rem;
+    }
+
+    /* .footer_grid .grid_image, 
+    .footer_grid .grid_text,
+    .footer_grid .grid_form,
+    .footer_grid .grid_list {
+      width: 50%;
+    } */
+
+    .footer_grid .grid_image {
+      grid-area: logo;
+    }
+
+    .footer_grid .grid_text {
+      grid-area: text;
+    }
+
+    .footer_grid .grid_text p {
+      max-width: 30ch;
+    }
+
+    .footer_grid .grid_form {
+      grid-area: form;
+    }
+
+    .footer_grid .grid_list {
+      grid-area: list;
+    }
+
+    .footer_grid .grid_list .list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .footer_copyright .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer_copyright p {
+      margin-bottom: 0rem;
+    }
+  }
+</style>
