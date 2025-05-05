@@ -20,28 +20,49 @@ import Navigation from "./Navigation";
 		left: 0;
 		width: 100%;
 		z-index: 2;
+		animation: changeColor linear both;
+		animation-timeline: scroll();
+		animation-range: 200px 500px;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.hide_header {
+		transform: translateY(-100%);
 	}
 
 	.header .container {
-		max-width: 400px;
+		width: 90%;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 4rem;
-		padding-block: 2rem;
-		padding-inline: 1.5rem;
+		padding: 1.5rem;
 	}
 
   .container .logo {
 		fill: var(--white);
 		width: 120px;
+		animation: changeColorLogo linear both;
+		animation-timeline: scroll();
+		animation-range: 200px 500px;
+	}
+
+	@keyframes changeColor {
+		to {
+			background-color: var(--bgWhite);
+		}
+	}
+
+	@keyframes changeColorLogo {
+		to {
+			fill: var(--darkGray);
+		}
 	}
 
 	@media (min-width: 1200px) {
 		.header .container {
-			max-width: 1200px;
-			padding-inline: 0;
+			padding: 2rem 0rem;
 		}
 
 		.container .logo {
