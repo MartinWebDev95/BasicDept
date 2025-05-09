@@ -1,0 +1,49 @@
+.trailer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: none;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video_container[aria-hidden="true"] {
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.video_container[aria-hidden="false"] {
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+
+.video_container .video_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  mix-blend-mode: difference;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.video_container .video_overlay p {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--bgWhite);
+  text-transform: uppercase;
+  transition: all 0.5s linear;
+  user-select: none;
+}
+
+.video_container .video_overlay p:hover {
+  cursor: grab;
+}
