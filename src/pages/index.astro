@@ -1,17 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import HeroSection from '../components/HeroSection.astro';
+import HeroSection from '../components/HeroSection';
 import AwardsSection from '../components/AwardsSection.astro';
 import PortfolioSection from '../components/PortfolioSection.astro';
+import FeaturedEngagementsSection from '../components/FeaturedEngagementsSection.astro';
+import HelpsBrandsSection from '../components/HelpsBrandsSection.astro';
+import Footer from '../components/Footer.astro';
+import FeaturedNewsSection from '../components/FeaturedNewsSection.astro';
+import Noise from '../components/Noise.astro';
 ---
 
 <Layout title="BASIC/DEPT® | Digital Branding & Product Design Agency">
+	<Noise />
+
 	<Header />
 	
 	<main>
-		<HeroSection />
+		<HeroSection client:load />
 		<AwardsSection />
 		<PortfolioSection />
+		<FeaturedEngagementsSection />
+		<HelpsBrandsSection />
+		<FeaturedNewsSection />
 	</main>
+
+	<Footer />
 </Layout>
