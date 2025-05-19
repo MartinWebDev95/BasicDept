@@ -9,7 +9,7 @@ import getDataFeaturedNews from '../utils/getDataFeaturedNews'
     <div class="section_header">
       <h2>Featured <br/> News</h2>
 
-      <Button theme="light" >View All</Button>
+      <Button>View All</Button>
     </div>
 
     <ul class="news_list">
@@ -57,17 +57,17 @@ import getDataFeaturedNews from '../utils/getDataFeaturedNews'
 
   .section_header h2 {
     text-transform: uppercase;
-    color: var(--darkGray);
+    color: var(--textColor);
     font-size: clamp(1.5em, 3vw, 2.5em);
   }
 
   .news_list .news_item {
-    border-top: 1px solid var(--darkGray);
+    border-top: 1px solid var(--textColor);
   }
   
   .news_item .news_link {
     margin-top: 1rem;
-    color: var(--darkGray);
+    color: var(--textColor);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
