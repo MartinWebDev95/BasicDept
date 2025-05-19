@@ -17,11 +17,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 
-	<body>
+	<body style="--bgColor:#ECECEC; --textColor:#252422; --colorLogo: #fff; --bgBar: #b4b4b4;">
 		<slot />
 
 		<script>
 			import "../scripts/hideHeader.js";
+			import "../scripts/changeTheme.js";
 		</script>
 	</body>
 </html>
@@ -34,7 +35,6 @@ const { title } = Astro.props;
 		--bgWhite: #ECECEC;
 		--white: #fff;
 		--black: #000;
-		--bgBar: #b4b4b4;
 		--bgCopyright: #191918;
 	}
 
@@ -45,12 +45,17 @@ const { title } = Astro.props;
 	html {
 		box-sizing: border-box;
 		font-family: system-ui, sans-serif;
-		background: var(--bgWhite);
 	}
-
+	
 	body, p{
 		margin: 0;
 		padding: 0;
+	}
+
+	body {
+		background: var(--bgColor);
+		color: var(--textColor);
+		transition: all 0.3s linear;
 	}
 
 	ul, ol {
