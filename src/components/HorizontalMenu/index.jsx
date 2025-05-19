@@ -1,12 +1,14 @@
 import useMoveCursor from '../../hooks/useMoveCursor'
 import getDataHorizontalMenu from '../../utils/getDataHorizontalMenu'
 import CustomCursor from '../CustomCursor'
+import { ArrowIcon } from '../Navigation'
 import styles from './HorizontalMenu.module.css'
 
 const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
 
   const { 
     cursorRef,
+    carouselRef,
     isPressed, 
     handleMouseEnter, 
     handleMouseMove, 
@@ -18,6 +20,14 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
   return (
     <div className={styles.horizontal_menu} aria-hidden={isHorizontalMenuHidden}>
       <div className={styles.first_row}>
+        <button
+          type='button'
+          className={styles.horizontal_menu_btn_mobile}
+          onClick={handleHorizontalMenu}
+        >
+          <ArrowIcon />
+        </button>
+
         <div aria-hidden={isHorizontalMenuHidden}>
           <div className={styles.dot}></div>
           
@@ -27,6 +37,7 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
         </div>
 
         <button 
+          type='button'
           className={styles.horizontal_menu_btn} 
           data-menu-hidden={isHorizontalMenuHidden}
           onClick={handleHorizontalMenu}
@@ -45,7 +56,7 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
       >
-        <ol className={styles.carousel_list}>
+        <ol ref={carouselRef} className={styles.carousel_list}>
           {getDataHorizontalMenu.map((item) => (
             <li key={item.id} className={styles.carousel_item}>
               <div>
@@ -57,6 +68,7 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
                   <p>{item.title}</p>
                   <p>{`©${item.year}`}</p>
                 </div>
+
                 <p className={styles.subtitle}>{item.subtitle}</p>
                 <p className={styles.description}>{item.description}</p>
               </div>
@@ -64,7 +76,7 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
           ))}
         </ol>
         
-        <CustomCursor cursorRef={cursorRef} isPressed={isPressed}/>
+        <CustomCursor cursorRef={cursorRef} isPressed={isPressed} type="menu" />
       </div>
 
       <div className={styles.footer} aria-hidden={isHorizontalMenuHidden}>
