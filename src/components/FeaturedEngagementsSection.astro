@@ -1,0 +1,67 @@
+---
+import FeaturesBrandCarousel from './FeaturesBrandCarousel'
+---
+
+<section class="section">
+  
+  <div class="container">
+    <div class="numbers">
+      <div>
+        <p>00</p>
+        <p>/05</p>
+      </div>
+  
+      <p class="dot"></p>
+    </div>
+
+    <h1>Featured <br/> Engagements</h1>
+  </div>
+
+  <FeaturesBrandCarousel client:visible />
+</section>
+
+<style>
+  .section{
+    padding-bottom: 4rem;
+  }
+  
+  .section .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .section .container .numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .numbers > div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .numbers .dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--textColor);
+    border-radius: 50%;
+  }
+
+  .section .container h1 {
+    text-transform: uppercase;
+    color: var(--textColor);
+    font-size: clamp(1.5em, 3vw, 2.5em);
+  }
+
+  @media (min-width: 1200px) {
+    .numbers > div {
+      flex-direction: row;
+    }
+  }
+</style>
