@@ -20,7 +20,7 @@ import Navigation from "./Navigation";
 		left: 0;
 		width: 100%;
 		z-index: 2;
-		animation: changeColor linear both;
+		animation: changeColorHeader linear both;
 		animation-timeline: scroll();
 		animation-range: 200px 500px;
 		transition: all 0.5s ease-in-out;
@@ -41,22 +41,24 @@ import Navigation from "./Navigation";
 	}
 
   .container .logo {
-		fill: var(--white);
+		--colorLogo: #fff;
+		fill: var(--colorLogo);
 		width: 120px;
 		animation: changeColorLogo linear both;
 		animation-timeline: scroll();
 		animation-range: 200px 500px;
 	}
 
-	@keyframes changeColor {
+	@keyframes changeColorHeader {
 		to {
-			background-color: var(--bgWhite);
+			background-color: var(--bgColor);
 		}
 	}
 
 	@keyframes changeColorLogo {
 		to {
-			fill: var(--darkGray);
+			--colorLogo: #252422; 
+			fill: var(--colorLogo);
 		}
 	}
 
@@ -66,7 +68,6 @@ import Navigation from "./Navigation";
 		}
 
 		.container .logo {
-			fill: var(--white);
 			width: 220px;
 		}
 	}
