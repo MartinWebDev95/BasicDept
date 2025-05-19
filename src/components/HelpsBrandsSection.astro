@@ -1,0 +1,90 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="section_brands">
+  <div class="container">
+    <div class="section_content">
+      <h2>
+        BASIC/DEPT® helps brands ● connect w/ culture
+      </h2>
+
+      <p>Adweek <span>Agency Spotlight</span></p>
+
+      <Button>
+        About Us
+      </Button>
+    </div>
+
+    <video class="section_video" src="/assets/helps_brands_connect.mp4" autoplay loop muted></video>
+  </div>
+</section>
+
+<style>
+  .section_brands {
+    padding-bottom: 4rem;
+  }
+
+  .section_brands .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .section_brands .container .section_content {
+    color: var(--textColor);
+    order: 2;
+  }
+
+  .container .section_content h2 {
+    text-transform: uppercase;
+    font-size: clamp(2.5em, 6vw, 5em);
+    font-weight: bold;
+    margin: 0;
+    line-height: 1em;
+  }
+
+  .container .section_content p {
+    text-transform: uppercase;
+    font-size: clamp(0.9em, 2vw, 1.2em);
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  .container .section_content p span {
+    font-weight: bold;
+  }
+
+  .section_brands .container .section_video {
+    order: 1;
+  }
+
+  @media (min-width: 680px) {
+    .section_brands {
+      padding-block: 4rem;
+      padding-bottom: 6rem;
+    }
+
+    .section_brands .container {
+      flex-direction: row;
+      align-items: start;
+      gap: 2rem;
+    }
+
+    .section_brands .container .section_content {
+      width: 50%;
+      order: 1;
+    }
+
+    .section_brands .container .section_video {
+      width: 50%;
+      order: 2;
+    }
+
+    .container .section_content p {
+      padding: 1.5rem 0 4rem 0;
+    }
+  }
+
+</style>
