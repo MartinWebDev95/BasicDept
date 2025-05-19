@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   background-color: var(--darkGray);
-  height: 100vh;
+  height: 100dvh;
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,9 @@
   justify-content: flex-start;
   gap: 1rem;
   padding-inline: 1.5rem;
-  padding-top: 6rem;
+  padding-top: 7rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .navigation .footer {
@@ -38,14 +40,27 @@
   padding-inline: 1.5rem;
   padding-bottom: 2rem;
   font-size: .8em;
-  color: var(--bgWhite);
+  color: var(--gray);
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
 }
 
-.list_item a {
+.list_item a, .list_item button {
   color: var(--pink);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.4em;
+}
+
+.list_item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 .list_item a::after {
@@ -55,6 +70,9 @@
   height: 2px;
   border-radius: 50%;
   background-color: var(--white);
+  animation: changeColorUnderline linear both;
+  animation-timeline: scroll();
+  animation-range: 200px 500px;
   transition: all .3s ease-in-out;
 }
 
@@ -67,6 +85,7 @@
   cursor: pointer;
   width: fit-content;
   height: 30px;
+  font-weight: bold;
 }
 
 .menu_mobile[data-menu-hidden=false] {
@@ -97,12 +116,33 @@
   bottom: 12px;
 }
 
+@keyframes changeColor {
+  to {
+    color: var(--textColor);
+  }
+}
+
 .menu_mobile[data-menu-hidden=true] {
   border: none;
+  animation: changeColor linear both;
+  animation-timeline: scroll();
+  animation-range: 200px 500px;
 }
 
 .horizontal_menu_btn {
   display: none;
+}
+
+@keyframes changeColorText {
+  to {
+    color: var(--textColor);
+  }
+}
+
+@keyframes changeColorUnderline {
+  to {
+    background-color: var(--textColor);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -140,11 +180,18 @@
     color: var(--white);
     font-weight: normal;
     font-size: .9em;
+    animation: changeColorText linear both;
+    animation-timeline: scroll();
+    animation-range: 200px 500px;
   }
 
   .list_item a:hover::after {
     width: 100%;
-  }	
+  }
+  
+  .list_item button {
+    display: none;
+  }
 
   .horizontal_menu_btn {
     background: transparent;
@@ -165,5 +212,8 @@
     height: 6px;
     border-radius: 50%;
     background-color: var(--white);
+    animation: changeColorUnderline linear both;
+    animation-timeline: scroll();
+    animation-range: 200px 500px;
   }
 }
