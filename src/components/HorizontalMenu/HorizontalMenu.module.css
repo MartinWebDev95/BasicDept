@@ -244,13 +244,13 @@
   .first_row .horizontal_menu_btn span:first-of-type {
     transform: rotate(45deg);
     right: 104px;
-    top: 18px;
+    top: 19px;
   }
 
   .first_row .horizontal_menu_btn span:last-of-type {
     transform: rotate(-45deg);
     right: 104px;
-    bottom: 18px;
+    bottom: 19px;
   }
 
   .first_row .horizontal_menu_btn:hover {
