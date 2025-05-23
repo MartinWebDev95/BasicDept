@@ -36,6 +36,7 @@ const HeroSection = () => {
       onMouseEnter={handleMouseEnter} 
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      id='section_hero'
       className={styles.hero_section}
     >
       <VideoCursor cursorRef={cursorRef} />
