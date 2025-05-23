@@ -63,29 +63,20 @@
   gap: .5rem;
 }
 
-.list_item a::after {
-  content: '';
-  display: block;
-  width: 0%;
-  height: 2px;
-  border-radius: 50%;
-  background-color: var(--white);
-  animation: changeColorUnderline linear both;
-  animation-timeline: scroll();
-  animation-range: 200px 500px;
-  transition: all .3s ease-in-out;
-}
-
 .menu_mobile {
   display: block;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--textColor);
   background-color: transparent;
   border: none;
   cursor: pointer;
   width: fit-content;
   height: 30px;
   font-weight: bold;
+}
+
+.menu_mobile[data-transparent="true"] {
+  color: var(--white);
 }
 
 .menu_mobile[data-menu-hidden=false] {
@@ -116,33 +107,12 @@
   bottom: 12px;
 }
 
-@keyframes changeColor {
-  to {
-    color: var(--textColor);
-  }
-}
-
 .menu_mobile[data-menu-hidden=true] {
   border: none;
-  animation: changeColor linear both;
-  animation-timeline: scroll();
-  animation-range: 200px 500px;
 }
 
 .horizontal_menu_btn {
   display: none;
-}
-
-@keyframes changeColorText {
-  to {
-    color: var(--textColor);
-  }
-}
-
-@keyframes changeColorUnderline {
-  to {
-    background-color: var(--textColor);
-  }
 }
 
 @media (min-width: 1200px) {
@@ -159,6 +129,10 @@
     opacity: 1;
     pointer-events: all;
   }
+
+  .navigation[data-transparent="true"] {
+		color: var(--white);
+	}
   
   .navigation .navigation_list {
     flex-direction: row;
@@ -177,12 +151,27 @@
   }
 
   .list_item a {
-    color: var(--white);
+    color: var(--textColor);
     font-weight: normal;
     font-size: .9em;
-    animation: changeColorText linear both;
-    animation-timeline: scroll();
-    animation-range: 200px 500px;
+  }
+
+  .navigation[data-transparent="true"] .list_item a {
+    color: var(--white);
+  }
+
+  .list_item a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: var(--textColor);
+    transition: all .3s ease-in-out;
+  }
+
+  .navigation[data-transparent="true"] .list_item a::after {
+    background-color: var(--white);
   }
 
   .list_item a:hover::after {
@@ -211,9 +200,10 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
+    background-color: var(--textColor);
+  }
+
+  .horizontal_menu_btn[data-transparent="true"] span {
     background-color: var(--white);
-    animation: changeColorUnderline linear both;
-    animation-timeline: scroll();
-    animation-range: 200px 500px;
   }
 }

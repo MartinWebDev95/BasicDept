@@ -33,11 +33,8 @@ const Navigation = () => {
   const handleMenu = () => {
     if(isMenuHidden) {
       document.querySelector('body').style.overflow = 'hidden';
-      document.querySelector('body').style.setProperty('--colorLogo', '#F9CDCD');
-      document.querySelector('header').classList.remove('hide_header');
     } else {
       document.querySelector('body').style.overflow = 'auto';
-      document.querySelector('body').style.setProperty('--colorLogo', '#fff');
     }
 
     setIsMenuHidden(!isMenuHidden);
@@ -45,7 +42,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className={styles.navigation} aria-hidden={isMenuHidden}>
+      <nav className={styles.navigation} aria-hidden={isMenuHidden} data-transparent='true'>
         <ul className={styles.navigation_list}>
           <li className={styles.list_item}>
             <a href="#">Work</a>
@@ -85,7 +82,9 @@ const Navigation = () => {
       </nav>
 
       <button 
-        className={styles.horizontal_menu_btn} 
+        className={styles.horizontal_menu_btn}
+        id='horizontal_menu_btn'
+        data-transparent='true'  
         data-menu-hidden={isHorizontalMenuHidden}
         onClick={handleHorizontalMenu}
       >
@@ -95,7 +94,9 @@ const Navigation = () => {
       </button>
     
       <button 
-        className={styles.menu_mobile} 
+        className={styles.menu_mobile}
+        id='menu_mobile'
+        data-transparent='true' 
         data-menu-hidden={isMenuHidden} 
         onClick={handleMenu}
       >
@@ -112,4 +113,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Navigation;
