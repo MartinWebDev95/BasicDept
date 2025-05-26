@@ -39,6 +39,7 @@ const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
         <button 
           type='button'
           className={styles.horizontal_menu_btn} 
+          id='horizontal_menu_btn_close'
           data-menu-hidden={isHorizontalMenuHidden}
           onClick={handleHorizontalMenu}
         >
