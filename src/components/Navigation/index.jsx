@@ -74,16 +74,16 @@ const Navigation = () => {
           <p>Basic/Dept&copy;, INC</p>
           <p>10 - 24&copy;</p>
         </div>
-
-        <HorizontalMenu 
-          isHorizontalMenuHidden={isHorizontalMenuHidden} 
-          handleHorizontalMenu={handleHorizontalMenu}
-        />
       </nav>
+
+      <HorizontalMenu 
+        isHorizontalMenuHidden={isHorizontalMenuHidden} 
+        handleHorizontalMenu={handleHorizontalMenu}
+      />
 
       <button 
         className={styles.horizontal_menu_btn}
-        id='horizontal_menu_btn'
+        id='horizontal_menu_btn_open'
         data-transparent='true'  
         data-menu-hidden={isHorizontalMenuHidden}
         onClick={handleHorizontalMenu}
