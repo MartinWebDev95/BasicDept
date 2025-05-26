@@ -210,7 +210,7 @@
     opacity: 1;
     transition: all .8s ease-in-out;
   }
-
+  
   .first_row .horizontal_menu_btn {
     background: transparent;
     border: 2px solid var(--white);
