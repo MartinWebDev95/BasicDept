@@ -3,7 +3,7 @@ const section_hero = document.querySelector('#section_hero');
 const header = document.querySelector('header');
 const navigation = document.querySelector('nav');
 const menu_mobile = document.querySelector('#menu_mobile');
-const horizontal_menu_btn = document.querySelector('#horizontal_menu_btn');
+const horizontal_menu_btn = document.querySelector('#horizontal_menu_btn_open');
 
 let options = {
   root: null,
