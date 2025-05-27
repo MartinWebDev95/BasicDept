@@ -1,4 +1,8 @@
-<div class="noise"></div>
+---
+const { type } = Astro.props;
+---
+
+<div class={`noise ${type === 'header' ? 'noise_header' : 'noise_bg'}`}></div>
 
 <style>
   @keyframes noise {
@@ -13,11 +17,21 @@
   .noise {
     background-image: url('/assets/noise.png');
     width: 200%;
-    height: 200vh;
-    position: fixed;
-    pointer-events: none;
-    z-index: -1;
     inset: 0;
+    z-index: -1;
+    pointer-events: none;
     animation: noise 0.2s infinite linear;
+  }
+
+  .noise_bg {
+    height: 200dvh;
+    position: fixed;
+  }
+
+  .noise_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200%;
   }
 </style>
