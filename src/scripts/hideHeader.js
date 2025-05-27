@@ -32,10 +32,6 @@ horizontalMenuBtnOpen.addEventListener('click', () => {
 // Function to allow the header to hide when the horizontal menu is closed
 horizontalMenuBtnClose.addEventListener('click', () => {
   isHorizontalMenuOpen = !isHorizontalMenuOpen;
-
-  if(!isHorizontalMenuOpen) {
-    header.classList.add('hide_header');
-  }
 });
 
 window.addEventListener('scroll', () => {
