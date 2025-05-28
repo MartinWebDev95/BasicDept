@@ -8,12 +8,6 @@ const FeaturesBrandCarousel = () => {
 
   const barRef = useRef();
   const progressbarRef = useRef();
-
-  const handleScroll = (e) => {
-    const scrollX = e.target.scrollLeft;
-    
-    progressbarRef.current.style.left = `${scrollX / 1.63}px`;
-  }
   
   const { 
     cursorRef,
@@ -25,6 +19,25 @@ const FeaturesBrandCarousel = () => {
     handleMouseDown,
     handleMouseUp, 
   } = useMoveCursor();
+
+  const handleScroll = (e) => {
+    const carousel = carouselRef.current;
+    const bar = barRef.current;
+    const progressbar = progressbarRef.current;
+
+    const scrollLeft = carousel.scrollLeft;
+    const maxScrollLeft = carousel.scrollWidth - carousel.offsetWidth;
+
+    const barWidth = bar.offsetWidth;
+    const progressbarWidth = progressbar.offsetWidth;
+
+    const maxTranslate = barWidth - progressbarWidth;
+
+    const scrollPercentage = scrollLeft / maxScrollLeft;
+    const translateX = scrollPercentage * maxTranslate;
+
+    progressbar.style.left = `${translateX}px`;
+  }
 
   return (
     <>
