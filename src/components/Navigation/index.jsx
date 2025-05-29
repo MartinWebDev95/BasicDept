@@ -34,6 +34,7 @@ const Navigation = () => {
     if(isMenuHidden) {
       document.querySelector('body').style.overflow = 'hidden';
     } else {
+      setIsHorizontalMenuHidden(true);
       document.querySelector('body').style.overflow = 'auto';
     }
 
