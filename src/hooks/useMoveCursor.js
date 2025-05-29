@@ -1,68 +1,62 @@
 import { useRef, useState } from "react";
 
 let cursorSize = 0;
-let coordX = 0;
 
-const useMoveCursor = () => {
+const useMoveCursor = ({ parentRef }) => {
   const [isPressed, setIsPressed] = useState(false);
 
   const cursorRef = useRef(null);
-  const carouselRef = useRef(null);
   const startX = useRef(0);
   const scrollStartRef = useRef(0);
 
   const handleMouseEnter = () => {
-    cursorSize = cursorRef.current.offsetWidth;
+    const cursorRect = cursorRef.current.getBoundingClientRect();
+    cursorSize = cursorRect.width;
   }
 
   const handleMouseMove = (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
-    // const mouseX = e.clientX - (cursorSize * 2);
-    // const mouseY = e.clientY - (cursorSize * 2);
 
+    const parentRect = parentRef.current.getBoundingClientRect();
+
+    // Calculate the position of the cursor relative to the parent element
+    const relativeX = mouseX - parentRect.left;
+    const relativeY = mouseY - parentRect.top;
+
+    // Ensure the mouse is always in the middle of the cursor
+    const offsetX = relativeX - (cursorSize / 2);
+    const offsetY = relativeY - (cursorSize / 2);
+    
     cursorRef.current.style.transition = 'none';
-    cursorRef.current.style.transform = `translate3d(${mouseX - (cursorSize * 2)}px, ${mouseY - (cursorSize * 2)}px, 0)`;
+    cursorRef.current.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
 
-    // console.log({mouseX: mouseX + cursorSize, coordX});
-    // if(isPressed && (mouseX >= coordX)){
-      
-    //   carouselRef.current.style.transition = 'all .3s linear';
-    //   carouselRef.current.scrollLeft -= `${mouseX - coordX}`;
-    // }
-
-    // if(isPressed && (mouseX <= coordX)){
-      
-    //   // console.log({mouseX, coordX});
-    //   carouselRef.current.style.transition = 'all .3s linear';
-    //   carouselRef.current.scrollLeft += `${coordX - mouseX}`;
-    // }
     if(isPressed){
-      // const deltaX = previousX.current - mouseX;
-      // console.log({previousX: previousX.current, mouseX, deltaX});
-      // carouselRef.current.scrollLeft += deltaX;
-      const walk = mouseX - startX.current; // how far the mouse has moved
-      carouselRef.current.scrollLeft = scrollStartRef.current - walk; // scroll the element
-      console.log({mouseX, startX: startX.current, scrollStart: scrollStartRef.current, walk});
-    }
+      // How far the mouse has moved
+      const walk = mouseX - startX.current;
 
-    // previousX.current = mouseX;
+      // Scroll the element
+      parentRef.current.scrollLeft = scrollStartRef.current - walk;
+    }
   }
   
   const handleMouseLeave = () => {
-    cursorRef.current.style.transition = 'all .1s linear';
-    cursorRef.current.style.transform = `translate3d(0px, 0px, 0)`;
+    const parentRect = parentRef.current.getBoundingClientRect();
+
+    // Reset the custom cursor position to the center of the parent element
+    const positionX = (parentRect.width / 2) - (cursorSize / 2);
+    const positionY = (parentRect.height / 2) - (cursorSize / 2);
+
+    cursorRef.current.style.transition = 'transform .2s linear';
+    cursorRef.current.style.transform = `translate3d(${positionX}px, ${positionY}px, 0)`;
+
     setIsPressed(false);
   }
   
   const handleMouseDown = (e) => {
     setIsPressed(true);
-    // coordX = e.clientX;
-    // console.log(coordX);
-    // cursorSize = cursorRef.current.offsetWidth;
-    // previousX.current = e.clientX;
     startX.current = e.clientX;
-    scrollStartRef.current = carouselRef.current.scrollLeft;
+    scrollStartRef.current = parentRef.current.scrollLeft;
   }
   
   const handleMouseUp = () => {
@@ -71,7 +65,6 @@ const useMoveCursor = () => {
 
   return {
     cursorRef,
-    carouselRef,
     isPressed,
     handleMouseEnter,
     handleMouseMove,

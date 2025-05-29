@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import useMoveCursor from '../../hooks/useMoveCursor'
 import getDataHorizontalMenu from '../../utils/getDataHorizontalMenu'
 import CustomCursor from '../CustomCursor'
@@ -6,16 +7,17 @@ import styles from './HorizontalMenu.module.css'
 
 const HorizontalMenu = ({ isHorizontalMenuHidden, handleHorizontalMenu }) => {
 
+  const carouselRef = useRef();
+
   const { 
     cursorRef,
-    carouselRef,
     isPressed, 
     handleMouseEnter, 
     handleMouseMove, 
     handleMouseLeave,
     handleMouseDown,
     handleMouseUp, 
-  } = useMoveCursor();
+  } = useMoveCursor({ parentRef: carouselRef });
 
   return (
     <div className={styles.horizontal_menu} aria-hidden={isHorizontalMenuHidden}>

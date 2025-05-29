@@ -8,17 +8,17 @@ const FeaturesBrandCarousel = () => {
 
   const barRef = useRef();
   const progressbarRef = useRef();
+  const carouselRef = useRef();
   
   const { 
     cursorRef,
-    carouselRef,
     isPressed, 
     handleMouseEnter, 
     handleMouseMove, 
     handleMouseLeave,
     handleMouseDown,
     handleMouseUp, 
-  } = useMoveCursor();
+  } = useMoveCursor({ parentRef: carouselRef });
 
   const handleScroll = (e) => {
     const carousel = carouselRef.current;
