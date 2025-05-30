@@ -25,7 +25,9 @@ const VideoHero = () => {
         src="/assets/hero_video_trailer.mp4"
         autoPlay 
         loop
-        muted 
+        muted
+        playsInline
+        webkit-playsinline 
         className={styles.trailer}
         onClick={handlePlay} 
       >
