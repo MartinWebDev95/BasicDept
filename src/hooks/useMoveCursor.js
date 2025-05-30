@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 let cursorSize = 0;
 
@@ -8,6 +8,17 @@ const useMoveCursor = ({ parentRef }) => {
   const cursorRef = useRef(null);
   const startX = useRef(0);
   const scrollStartRef = useRef(0);
+
+  useEffect(() => {
+    // Set the initial position of the custom cursor to the center of the parent element
+    if (!parentRef.current || !cursorRef.current) return;
+    
+    const parentRect = parentRef.current.getBoundingClientRect();
+    const positionX = (parentRect.width / 2) - (cursorSize / 2);
+    const positionY = (parentRect.height / 2) - (cursorSize / 2);
+
+    cursorRef.current.style.transform = `translate3d(${positionX}px, ${positionY}px, 0)`;
+  }, []);
 
   const handleMouseEnter = () => {
     const cursorRect = cursorRef.current.getBoundingClientRect();
