@@ -16,7 +16,17 @@ import Button from './Button.astro';
       </Button>
     </div>
 
-    <video class="section_video" src="/assets/helps_brands_connect.mp4" autoplay loop muted></video>
+    <video 
+      preload="metadata"
+      src="/assets/helps_brands_connect.mp4" 
+      class="section_video" 
+      autoplay 
+      loop 
+      muted
+      playsinline
+      webkit-playsinline
+    >
+    </video>
   </div>
 </section>
 
