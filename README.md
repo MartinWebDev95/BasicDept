@@ -40,21 +40,21 @@ Reto de la web de Frontend Practice, donde he recreado la web de BASIC/DEPT&COPY
 ## 📸 Algunas capturas del proyecto!
 ---
 
-![Hero Section Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/heroSection.png)
+![Hero Section Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/heroSection.png)
 
-![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/header.png)
+![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/header.png)
 
-![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/featuredEngagement.png)
+![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagement.png)
 
-![Brands Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/brands.png)
+![Brands Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/brands.png)
 
-![Featured News Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/featuredNews.png)
+![Featured News Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredNews.png)
 
-![Footer Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/footer.png)
+![Footer Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/footer.png)
 
-![Menu Mobile Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/menuMobile.png)
+![Menu Mobile Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/menuMobile.png)
 
-![Horizontal Menu Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/horizontalMenu.png)
+![Horizontal Menu Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/horizontalMenu.png)
 
 ## 🗃️ Estructura del proyecto
 ---
@@ -64,7 +64,7 @@ Esta es la estructura que he utilizado en este proyecto:
 ```
 /
 ├── public/
-│   └── assets/          
+│   └──           
 │       └── image.jpg
 │
 ├── src/

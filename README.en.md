@@ -40,21 +40,21 @@ Frontend Practice challenge where i have recreated the BASIC/DEPT&COPY; website 
 ## 📸 Some Screenshots!
 ---
 
-![Hero Section Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/heroSection.png)
+![Hero Section Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/heroSection.png)
 
-![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/header.png)
+![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/header.png)
 
-![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/featuredEngagement.png)
+![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagement.png)
 
-![Brands Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/brands.png)
+![Brands Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/brands.png)
 
-![Featured News Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/featuredNews.png)
+![Featured News Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredNews.png)
 
-![Footer Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/footer.png)
+![Footer Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/footer.png)
 
-![Menu Mobile Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/menuMobile.png)
+![Menu Mobile Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/menuMobile.png)
 
-![Horizontal Menu Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/horizontalMenu.png)
+![Horizontal Menu Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/horizontalMenu.png)
 
 ## 🗃️ Project Structure
 ---
