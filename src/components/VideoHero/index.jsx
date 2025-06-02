@@ -1,4 +1,4 @@
-import formatTime from "../../helpers/formatTime";
+import formatTime from "../../utils/formatTime";
 import styles from "./VideoHero.module.css";
 import useVideoPlayer from "../../hooks/useVideoPlayer";
 
