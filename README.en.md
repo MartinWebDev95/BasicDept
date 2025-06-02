@@ -44,7 +44,7 @@ Frontend Practice challenge where i have recreated the BASIC/DEPT&COPY; website 
 
 ![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/header.png)
 
-![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagement.png)
+![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagements.png)
 
 ![Brands Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/brands.png)
 

@@ -44,7 +44,7 @@ Reto de la web de Frontend Practice, donde he recreado la web de BASIC/DEPT&COPY
 
 ![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/header.png)
 
-![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagement.png)
+![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagements.png)
 
 ![Brands Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/brands.png)
 
