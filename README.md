@@ -64,14 +64,14 @@ Esta es la estructura que he utilizado en este proyecto:
 ```
 /
 ├── public/
-│   └──           
+│   └── assets/          
 │       └── image.jpg
 │
 ├── src/
 │   ├── components/
 │   │    ├── Component/
-│   │    │        └── index.jsx
-│   │    │        └── Component.module.css  
+│   │    │    └── index.jsx
+│   │    │    └── Component.module.css  
 │   │    └── Component.astro
 │   ├── utils/
 │   │   └── util.js
