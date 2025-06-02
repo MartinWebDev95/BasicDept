@@ -8,12 +8,12 @@
 [Basic Dept]: https://img.shields.io/badge/BASIC%20DEPT&COPY;-000000?style=for-the-badge
 [Challenge]: https://img.shields.io/badge/Frontend%20Practice%20Challenge-000000?style=for-the-badge
 
-Reto de la web de Frontend Practice, donde he recreado la web de BASIC/DEPT&COPY; utilizando Astro y React.
+Frontend Practice challenge where i have recreated the BASIC/DEPT&COPY; website using Astro and React.
 
 [![Basic Dept]](https://basicdept-gamma.vercel.app/)
 [![Challenge]](https://www.frontendpractice.com/projects/basic)
 
-## 👨🏽‍💻 ¿Qué tecnologías he utilizado?
+## 👨🏽‍💻 What technologies have I used?
 ---
 
 [Button Vercel]: https://img.shields.io/badge/Deploy%20on%20Vercel-000000?style=for-the-badge&logo=vercel
@@ -24,20 +24,20 @@ Reto de la web de Frontend Practice, donde he recreado la web de BASIC/DEPT&COPY
 [Button Highcharts]: https://img.shields.io/badge/Highcharts-000000?style=for-the-badge
 
 [![Button Astro]](https://astro.build/)
-[![Button React]](https://es.react.dev/)
+[![Button React]](https://react.dev/)
 [![Button CSS]]()
 [![Button Javascript]](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript)
 [![Button Vercel]](https://vercel.com/)
 
-- **Astro:** He utilizado Astro como framework para el desarrollo de la web, ya que, permite reducir la sobrecarga de Javascript en el navegador y mejora el rendimiento de la web, además de tener un buen SEO.
+- **Astro:** I have used Astro as the framework for developing the website, as it allows reducing JavaScript overhead in the browser and improves website performance, in addition to having good SEO.
 
-- **React:** He usado React para los componentes que necesitan la interacción del usuario.
+- **React:** I have used React for components that require user interaction.
 
-- **CSS Modules:** He utilizado CSS Modules para el estilo de los componentes en React, lo que me permite tener un estilo modular y evitar conflictos de nombres.
+- **CSS Modules:** I have used CSS Modules for styling React components, which allows me to have modular styles and avoid naming conflicts.
 
-- **Javascript:** He utilizado Javascript para hacer algunos scripts como cambiar el tema de la web cuando llega el scroll a determinada sección de la web y para ocultar y mostrar el header al hacer scroll.
+- **Javascript:** I have used JavaScript to create scripts such as changing the website theme when scrolling to a specific section and hiding/showing the header on scroll.
 
-## 📸 Algunas capturas del proyecto!
+## 📸 Some Screenshots!
 ---
 
 ![Hero Section Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/heroSection.png)
@@ -56,10 +56,10 @@ Reto de la web de Frontend Practice, donde he recreado la web de BASIC/DEPT&COPY
 
 ![Horizontal Menu Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/assets/screenshots/horizontalMenu.png)
 
-## 🗃️ Estructura del proyecto
+## 🗃️ Project Structure
 ---
 
-Esta es la estructura que he utilizado en este proyecto:
+This is the structure that i have used in this project:
 
 ```
 /
@@ -86,9 +86,9 @@ Esta es la estructura que he utilizado en este proyecto:
 └── package.json
 ```
 
-## 👀 ¿Dónde puedes encontrarme?
+## 👀 Where you can find me?
 ---
 
-[Button Portfolio]: https://img.shields.io/badge/Visita%20mi%20Portfolio-000000?style=for-the-badge
+[Button Portfolio]: https://img.shields.io/badge/Visit%20my%20Portfolio-000000?style=for-the-badge
 
-[![Button Portfolio]](https://portfolio-martinwebdev95.vercel.app/)
+[![Button Portfolio]](https://portfolio-martinwebdev95.vercel.app/en)
