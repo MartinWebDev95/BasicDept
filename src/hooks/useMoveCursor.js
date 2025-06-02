@@ -12,6 +12,9 @@ const useMoveCursor = ({ parentRef }) => {
   useEffect(() => {
     // Set the initial position of the custom cursor to the center of the parent element
     if (!parentRef.current || !cursorRef.current) return;
+
+    const cursorRect = cursorRef.current.getBoundingClientRect();
+    cursorSize = cursorRect.width;
     
     const parentRect = parentRef.current.getBoundingClientRect();
     const positionX = (parentRect.width / 2) - (cursorSize / 2);
