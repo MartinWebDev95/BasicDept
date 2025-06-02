@@ -90,5 +90,7 @@ This is the structure that i have used in this project:
 ---
 
 [Button Portfolio]: https://img.shields.io/badge/Visit%20my%20Portfolio-000000?style=for-the-badge
+[Button LinkedIn]: https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge
 
 [![Button Portfolio]](https://portfolio-martinwebdev95.vercel.app/en)
+[![Button LinkedIn]](https://www.linkedin.com/in/jamartindev/)
