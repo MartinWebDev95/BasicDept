@@ -17,14 +17,14 @@ import Button from './Button.astro';
     </div>
 
     <video 
-      preload="metadata"
+      preload="auto"
       src="/assets/helps_brands_connect.mp4" 
       class="section_video" 
       autoplay 
       loop 
       muted
       playsinline
-      webkit-playsinline
+      webkit-playsinline="true"
     >
     </video>
   </div>
@@ -68,6 +68,7 @@ import Button from './Button.astro';
 
   .section_brands .container .section_video {
     order: 1;
+    pointer-events: none;
   }
 
   @media (min-width: 680px) {

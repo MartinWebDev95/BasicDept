@@ -21,13 +21,13 @@ const VideoHero = () => {
   return (
     <>
       <video 
-        preload='metadata' 
+        preload='auto' 
         src="/assets/hero_video_trailer.mp4"
         autoPlay 
         loop
         muted
         playsInline
-        webkit-playsinline 
+        webkit-playsinline="true"
         className={styles.trailer}
         onClick={handlePlay} 
       >
@@ -36,7 +36,7 @@ const VideoHero = () => {
       <div className={styles.video_container} aria-hidden={isVideoHidden}>
         <video 
           ref={videoRef}
-          preload='metadata' 
+          preload='auto' 
           src="/assets/hero_video.mp4"
           autoPlay 
           className={styles.video} 
@@ -50,6 +50,9 @@ const VideoHero = () => {
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
+            onTouchStart={handleMouseDown}
+            onTouchMove={handleMouseMove}
+            onTouchEnd={handleMouseUp}
           >
             {`${formatTime(currentTime)}/${formatTime(duration)}`}
           </p>
