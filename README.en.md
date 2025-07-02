@@ -42,7 +42,7 @@ Frontend Practice challenge where i have recreated the BASIC/DEPT&COPY; website 
 
 ![Hero Section Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/heroSection.png)
 
-![Header Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/header.png)
+![BD Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/bd.png)
 
 ![Featured Engagement Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/featuredEngagements.png)
 
@@ -52,9 +52,9 @@ Frontend Practice challenge where i have recreated the BASIC/DEPT&COPY; website 
 
 ![Footer Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/footer.png)
 
-![Menu Mobile Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/menuMobile.png)
-
 ![Horizontal Menu Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/horizontalMenu.png)
+
+![Menu Mobile Screenshot](https://github.com/MartinWebDev95/BasicDept/blob/master/public/screenshots/menuMobile.png)
 
 ## 🗃️ Project Structure
 ---
